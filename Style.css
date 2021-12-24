@@ -297,7 +297,7 @@ canvas {
     background: url("images/bitmoji.png");
 }
 #texteAboutMe{
-    width:1000px;
+    width:70%;
     font-size: 20px;
     margin-left:200px;
 }
