@@ -6,4 +6,12 @@ window.addEventListener("load", function (event) {
     });
 
     parallaxInstance.scalar(100, 100);
+
+    var scene2 = document.getElementById('aboutMePic');
+    var parallaxInstance2 = new Parallax(scene2,{
+        relativeInput: true
+    });
+
+    parallaxInstance2.scalar(100, 100);
+
 });

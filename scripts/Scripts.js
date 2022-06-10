@@ -188,8 +188,8 @@ function movePointer(x, y) {
     let ox = x - pointerX,
       oy = y - pointerY;
 
-    velocity.tx = velocity.tx + (ox / 150 * scale) * (touchInput ? 1 : -1);
-    velocity.ty = velocity.ty + (oy / 150 * scale) * (touchInput ? 1 : -1);
+    velocity.tx = velocity.tx + (ox / 2000 * scale) * (touchInput ? 1 : -1);
+    velocity.ty = velocity.ty + (oy / 2000 * scale) * (touchInput ? 1 : -1);
 
   }
 
@@ -222,3 +222,108 @@ function onMouseLeave() {
   pointerY = null;
 
 }
+
+const cursor = document.querySelectorAll(".cursor");''
+const links = document.querySelectorAll(".link");
+
+window.addEventListener("mousemove", (e) => {
+  
+  let x = e.pageX;
+  let y = e.pageY;
+  
+  cursor.forEach(el => {
+    el.style.left = `${x}px`;
+    el.style.top = `${y}px`;
+    
+    links.forEach(link => {
+      link.addEventListener("mouseenter", () => {
+        el.classList.add("hover");
+      })
+      link.addEventListener("mouseleave", () => {
+        el.classList.remove("hover");
+      })
+    })
+    
+  })
+  
+})
+var $cell = $('.card');
+
+//open and close card when clicked on card
+$cell.find('.js-expander').click(function() {
+
+  var $thisCell = $(this).closest('.card');
+
+  if ($thisCell.hasClass('is-collapsed')) {
+    $cell.not($thisCell).removeClass('is-expanded').addClass('is-collapsed').addClass('is-inactive');
+    $thisCell.removeClass('is-collapsed').addClass('is-expanded');
+    
+    if ($cell.not($thisCell).hasClass('is-inactive')) {
+      //do nothing
+    } else {
+      $cell.not($thisCell).addClass('is-inactive');
+    }
+
+  } else {
+    $thisCell.removeClass('is-expanded').addClass('is-collapsed');
+    $cell.not($thisCell).removeClass('is-inactive');
+  }
+});
+
+//close card when click on cross
+$cell.find('.js-collapser').click(function() {
+
+  var $thisCell = $(this).closest('.card');
+
+  $thisCell.removeClass('is-expanded').addClass('is-collapsed');
+  $cell.not($thisCell).removeClass('is-inactive');
+
+});
+
+jQuery(document).ready(function ($) {
+
+  $('#checkbox').change(function(){
+    setInterval(function () {
+        moveRight();
+    }, 3000);
+  });
+  
+	var slideCount = $('#slider ul li').length;
+	var slideWidth = $('#slider ul li').width();
+	var slideHeight = $('#slider ul li').height();
+	var sliderUlWidth = slideCount * slideWidth;
+	
+	$('#slider').css({ width: slideWidth, height: slideHeight });
+	
+	$('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+	
+    $('#slider ul li:last-child').prependTo('#slider ul');
+
+    function moveLeft() {
+        $('#slider ul').animate({
+            left: + slideWidth
+        }, 200, function () {
+            $('#slider ul li:last-child').prependTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
+
+    function moveRight() {
+        $('#slider ul').animate({
+            left: - slideWidth
+        }, 200, function () {
+            $('#slider ul li:first-child').appendTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
+
+    $('a.control_prev').click(function () {
+        moveLeft();
+    });
+
+    $('a.control_next').click(function () {
+        moveRight();
+    });
+
+});    
+

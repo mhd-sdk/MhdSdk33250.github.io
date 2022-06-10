@@ -2,11 +2,14 @@
 <html lang="en">
 
 <head>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet">
   <link href="./Style.css" rel="stylesheet">
+  <link href="dist/css/Stylesass.css" rel="stylesheet">
   <meta charset="UTF-8">
 
 
@@ -15,6 +18,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.8/typed.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.6/dist/js/splide.min.js"></script>
 </head>
 
 <body id="body">
@@ -22,27 +26,28 @@
 
 
 
-  <ul id="listesocial" class="animate__animated animate__bounceInUp">
-    <li><a class="alogo" href="https://github.com/MhdSdk33250"><svg class="logo" role="img" viewBox="0 0 24 24"
+  <ul id="listesocial" class="">
+    <li><a class="alogo link" href="https://github.com/MhdSdk33250"><svg class="logo" role="img" viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg">
           <title>GitHub</title>
           <path
             d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
         </svg></a></li>
 
-    <li><a class="alogo" href="https://www.linkedin.com/in/mehdi-seddik-841b341b9/"><svg class="logo" role="img"
+    <li><a class="alogo link" href="https://www.linkedin.com/in/mehdi-seddik-841b341b9/"><svg class="logo" role="img"
           viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <title>LinkedIn</title>
           <path
             d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
         </svg></a></li>
+              <li><a href="Mehdi_Seddik_CV.pdf" data-depth="0.001" class=" cv-class btn btn-white link btn-				 animate" target="_blank" download>Curriculum Vitae </a></li>
 
   </ul>
 
 
 
-  <section class="sectionpage" id="home">
-    <div class="corp">
+  <div class="sectionpage" id="container">
+    <div id="scrollsnap1" class="corp parallax__layer parallax__layer--back">
 
 
       <div>
@@ -53,49 +58,301 @@
       </div>
       <section id="parallax">
 
-        <div data-depth="0.003" id="nom" >
+        <div data-depth="0.005" id="nom">
           Mehdi Seddik
         </div>
 
-        <div data-depth="-0.007" id="titre" >
-          I.T student 
+        <div data-depth="0.005" id="titre">
+          I.T student
         </div>
 
-        <div id="description"  data-depth="0.005" >
+        <div id="description" data-depth="0.005">
           I'm a french I.T student at the Claude Bernard University<br>
           Currently looking for an internship to complete my degree
         </div>
-        <div id="cercle" data-depth="0.005"></div>
-        <img  id="photo"  data-depth="-0.007"  src="./images/IMG_20211222_114010.jpg">
+        <div id="cercle" data-depth="-0.003"></div>
+        <img id="photo" data-depth="0.005" src="./images/IMG_20211222_114010.jpg">
 
       </section>
 
 
-
+      <a class="container-arrow scroll-to" href="#section2">
+        <span>
+          <i class="link fa fa-angle-down" aria-hidden="true"></i> </span>
+      </a>
 
 
 
 
 
     </div>
+    <div id="corp2" class="parallax__layer parallax__layer--base">
+      
+<!--Waves Container-->
+<div>
+  <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+  <defs>
+  <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+  </defs>
+  <g class="parallax">
+  <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(28, 75, 120, 0.7)" />
+  <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(28, 75, 120, 0.4)" />
+  <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(28, 75, 120, 0.4)" />
+  <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(28, 75, 120, 0.6)" />
+  </g>
+  </svg>
+  </div>
+  <!--Waves end-->
+  <div id="mySidenav" onclick="openNav()" class="sidenav link">
+    <a href="#" id="about">About me&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+    </div>
 
+    <div id="mySidenav2" onclick="openNav2()" class="sidenav link">
+      <a id="projects"> <i class="fa-solid fa-arrow-left"></i>&nbsp;&nbsp;Projects </a>
+      </div>
 
-    <div id="wavy">
-      <div class="wave " id="wave1" style="--i:1;"></div>
-      <div class="wave" id="wave2" style="--i:2;"></div>
-      <div class="wave" id="wave3" style="--i:3;"></div>
-      <div class="wave" id="wave5" style="--i:2;"></div>
-      <div class="wave" id="wave4" style="--i:4;"></div>
+  <div id="aboutMePic">
+    <div id="cercle2" class="debug" data-depth="-0.003">
+
+    </div>
+    
+    <div id="cercle3" data-depth="0.003">
+    </div>
+    <div id="cercle4" data-depth="0.002">
+    </div>
+  <img id="bitmoji" data-depth="0.001" src="images/Technos/sticker.png">
+
+    <img id="symfony-logo" class="tech-logo link" data-depth="0.004" src="./images/Technos/symfonylogo.png">
+    <img id="html-logo" class="tech-logo link" data-depth="0.003" src="./images/Technos/HTML5.svg.png">
+    <img id="css-logo" class="tech-logo link" data-depth="0.004" src="./images/Technos/css.png">
+    <img id="jquery-logo" class="tech-logo link" data-depth="-0.003" src="./images/Technos/jQurery.png">
+    <img id="js-logo" class="tech-logo link" data-depth="-0.004" src="./images/Technos/600px-JavaScript-logo.png">
+    <img id="git-logo" class="tech-logo link" data-depth="-0.003" src="./images/Technos/git.png">
+
+    <!--div id="About">
+
+      <div id="About-text">
+        <span id="About-title" class="link">ABOUT ME</span> 
+      </div>
+    </div!-->
+
+  </div>
 
     </div>
 
+    <section id="section2"></section>
+  </div>
+  </div>
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+      setTimeout(function() {
+        document.getElementById("aboutDiv").style.opacity = "100%";
+      }, 500);
 
-    </div>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="scripts/Scripts.js"></script>
-    <script src="scripts/ScriptParallax.js"></script>
-    <script src="scripts/parallax.js"></script>
+    }
+    
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+      document.getElementById("aboutDiv").style.opacity = "0%";
+
+    }
+
+    function openNav2() {
+      document.getElementById("myNav2").style.width = "100%";
+    }
+    
+    function closeNav2() {
+      document.getElementById("myNav2").style.width = "0%";
+
+    }
+    </script>
+
 
 </body>
+<div id="myNav" class="overlay">
+  <div id="backgroundImageAbout"></div>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div id="aboutDiv">
+    <h1 id="aboutMeTitle">ABOUT ME</h1>
+    <p id="paragraph1">I enjoy taking complex problems and trying to resolve them. <br> I recently found a passion for web development,
+      so my main focus these days is learning web langages, especially back-end technologies such as symfony. <br></p>
+      <p>I'm actually looking for an apprenticeship to complete my studies</p>
+  </div>
+</div>
+
+<div id="myNav2" class="overlay2">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+  <div class="wrapper">
+
+    <div class="header">
+      <h1 class="header__title">My projects</h1>
+      <h2 class="header__subtitle">...</h2>
+    </div>
+  
+    <div class="cards">
+  
+      <div class=" card [ is-collapsed ] ">
+        <div class="link card__inner [ js-expander ]">
+          <span>mini bank</span>
+          <i class="fa fa-folder-o"></i>
+        </div>
+        <div class="card__expander">
+          <i class="link fa fa-close [ js-collapser ]"></i>
+          <div id="javaProjectContent">
+            OPERATIONAL BANK <br>
+             <span class="usedTechs">Object oriented java project | swing ui library <br></span>
+             <div id="slider">
+              <a href="#" class="control_next">></a>
+              <a href="#" class="control_prev"><</a>
+              <ul>
+                <li style="background-image:url('./images/java.png'); background-size: contain;background-repeat: no-repeat;background-position: center;"></li>
+                <li style="background-image:url('./images/java2.png'); background-size: contain;background-repeat: no-repeat;background-position: center;"></li>
+                <li style="background-image:url('./images/java3.png'); background-size: contain;background-repeat: no-repeat;background-position: center;"></li>
+
+              </ul>  
+            </div>
+            
+
+            
+          </div>
+          <div>Features :<br>
+          <span style="font-size: small;">-C.R.U.D bank account<br>
+          -Serializable accounts list <br>
+          -Design UI</span>
+        </div>
+        </div>
+      </div>
+  
+      <div class=" card [ is-collapsed ] ">
+        <div class="link  card__inner [ js-expander ]">
+          <span>Online manga store</span>
+          <i class="fa fa-folder-o"></i>
+        </div>
+        <div class="card__expander">
+          <i class="link  fa fa-close [ js-collapser ]"></i>
+          <div id="OnlineMangaProject">
+            E-commerce website <br>
+             <span class="usedTechs">Object oriented java project | swing ui library <br></span>
+             <div>
+               <img id="MangaPreview" src="./images/sitevitrine.png" alt="">
+             </div>
+            
+
+            
+          </div>
+          <div>Features :<br>
+          <span style="font-size: small;">-Functional search bar<br>
+          -Front-end animations<br>
+        </div>
+        </div>
+      </div>
+  
+      <div class=" card [ is-collapsed ] ">
+        <div class="link  card__inner [ js-expander ]">
+          <span>Baker application</span>
+          <i class="fa fa-folder-o"></i>
+        </div>
+        <div class="card__expander">
+          <i class="link  fa fa-close [ js-collapser ]"></i>
+          <div id="OnlineMangaProject">
+            School project : Baker app <br>
+             <span class="usedTechs">Object oriented java project | swing ui library <br></span>
+             <div>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/sOnB_apLcso" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+             </div>
+            
+
+            
+          </div>
+          <div>Features :<br>
+          <span style="font-size: small;">Reporting module<br>
+          -Biling module<br>
+          -clients manager <br>
+          -automatic dough recipes
+        </div>
+        </div>
+      </div>
+  <!--
+      <div class=" card [ is-collapsed ] ">
+        <div class="link  card__inner [ js-expander ]">
+          <span>Card</span>
+          <i class="fa fa-folder-o"></i>
+        </div>
+        <div class="card__expander">
+          <i class="link  fa fa-close [ js-collapser ]"></i>
+          Expander
+        </div>
+      </div>
+  
+      <div class=" card [ is-collapsed ] ">
+        <div class="link  card__inner [ js-expander ]">
+          <span>Card</span>
+          <i class="fa fa-folder-o"></i>
+        </div>
+        <div class="card__expander">
+          <i class="link  fa fa-close [ js-collapser ]"></i>
+          Expander
+        </div>
+      </div>
+  
+      <div class=" card [ is-collapsed ] ">
+        <div class="link  card__inner [ js-expander ]">
+          <span>Card</span>
+          <i class="fa fa-folder-o"></i>
+        </div>
+        <div class="card__expander">
+          <i class="link  fa fa-close [ js-collapser ]"></i>
+          Expander
+        </div>
+      </div>
+  
+      <div class=" card [ is-collapsed ] ">
+        <div class="link  card__inner [ js-expander ]">
+          <span>Card</span>
+          <i class="fa fa-folder-o"></i>
+        </div>
+        <div class="card__expander">
+          <i class="link  fa fa-close [ js-collapser ]"></i>
+          Expander
+        </div>
+      </div>
+  
+      <div class=" card [ is-collapsed ] ">
+        <div class="link  card__inner [ js-expander ]">
+          <span>Card</span>
+          <i class="fa fa-folder-o"></i>
+        </div>
+        <div class="card__expander">
+          <i class="link  fa fa-close [ js-collapser ]"></i>
+          Expander
+        </div>
+      </div>
+  
+      <div class=" card [ is-collapsed ] ">
+        <div class="link  card__inner [ js-expander ]">
+          <span>Card</span>
+          <i class="fa fa-folder-o"></i>
+        </div>
+        <div class="card__expander">
+          <i class="link  fa fa-close [ js-collapser ]"></i>
+          Expander
+        </div>
+      </div>-->
+  
+    </div>
+  
+  </div>
+</div>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="scripts/Scripts.js"></script>
+<script src="scripts/ScriptParallax.js"></script>
+<script src="scripts/parallax.js"></script>
+
 
 </html>
